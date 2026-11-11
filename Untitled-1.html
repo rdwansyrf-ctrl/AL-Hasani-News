@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Islamic News | Berita Pesantren</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI',sans-serif;
+    background:#f4f6f5;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#0a3d2e,#0f6d4a);
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header h1{
+    margin:0;
+    font-size:26px;
+    letter-spacing:1px;
+}
+header span{color:#f9c74f}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:30px auto;
+    padding:0 15px;
+}
+
+/* FOTO UTAMA */
+.main-photo{
+    position:relative;
+    border-radius:14px;
+    overflow:hidden;
+}
+.main-photo img{
+    width:100%;
+    height:480px;
+    object-fit:cover;
+    cursor:pointer;
+}
+.overlay{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:25px;
+    background:linear-gradient(transparent,rgba(0,0,0,.85));
+    color:#fff;
+}
+.overlay h2{
+    margin:0;
+    font-size:20px;
+}
+.overlay p{
+    margin-top:8px;
+    font-size:16px;
+}
+
+/* ARTIKEL */
+.article{
+    margin-top:25px;
+    font-size:17px;
+    line-height:1.9;
+}
+
+/* GALERI FOTO */
+.gallery{
+    margin-top:35px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:16px;
+}
+.photo-box{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    cursor:pointer;
+}
+.photo-box img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+}
+.caption{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:10px 12px;
+    font-size:14px;
+    color:#fff;
+    background:linear-gradient(transparent,rgba(0,0,0,.9));
+}
+
+/* VIDEO */
+.video{
+    margin:40px 0;
+}
+.video iframe{
+    width:100%;
+    height:450px;
+    border-radius:14px;
+}
+
+/* LIGHTBOX */
+.lightbox{
+    position:fixed;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+}
+.lightbox-content{
+    text-align:center;
+    max-width:90%;
+}
+.lightbox-content img{
+    max-width:100%;
+    max-height:80vh;
+    border-radius:12px;
+}
+.lightbox-content p{
+    color:#f9c74f;
+    margin-top:15px;
+    font-size:16px;
+}
+
+/* FOOTER */
+footer{
+    background:#0a3d2e;
+    color:#ddd;
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>AL-HASANI <span>NEWS</span></h1>
+    <div>Berita Pesantren Indonesia</div>
+</header>
+
+<div class="container">
+
+    <!-- FOTO UTAMA -->
+    <div class="main-photo" onclick="openMainLightbox()">
+        <img src="D:\CODING\ziaroh\img\4 (2).png">
+        <div class="overlay">
+            <h2>Pondok Pesantren Al-Hasani Laksanakan Studi Tour Ziarah Wali Delapan</h2>
+            
+        </div>
+    </div>
+
+    <!-- ARTIKEL -->
+    <div class="article">
+        <p>
+        Pondok Pesantren Al-Hasani Laksanakan Studi Tour Ziarah Wali Delapan
+
+Bondowoso – Pondok Pesantren Al-Hasani yang terletak di Desa Grujugan Lor, Kecamatan Jmbesari DS, Kabupaten Bondowoso, telah melaksanakan kegiatan studi tour religi berupa ziarah ke makam Wali Delapan (Wali 8). Kegiatan ini diikuti oleh para santri sebagai bagian dari pembelajaran spiritual dan penguatan nilai-nilai keislaman.
+
+Studi tour ziarah tersebut bertujuan untuk mengenalkan sejarah perjuangan para wali dalam menyebarkan agama Islam di Nusantara, sekaligus menanamkan keteladanan akhlak dan semangat dakwah kepada para santri. Selain itu, kegiatan ini juga menjadi sarana pembinaan mental dan spiritual agar santri memiliki karakter religius yang kuat.
+
+Pimpinan Pondok Pesantren Al-Hasani menyampaikan bahwa kegiatan ziarah wali ini merupakan agenda rutin pesantren yang memiliki nilai edukatif dan religius. Melalui kegiatan ini, santri diharapkan dapat meneladani perjuangan para wali serta mengamalkan nilai-nilai Islam dalam kehidupan sehari-hari.
+
+Selama pelaksanaan kegiatan, para santri mengikuti rangkaian acara dengan tertib dan khidmat. Kegiatan ditutup dengan doa bersama sebagai bentuk rasa syukur serta harapan agar seluruh santri senantiasa diberikan keberkahan dan keselamatan.
+    </div>
+
+    <!-- FOTO MOMENT -->
+    <div class="gallery">
+
+        <div class="photo-box" onclick="openLightbox(this)">
+            <img src="D:\CODING\ziaroh\img\1.png">
+            <div class="caption">Doa bersama pengasuh di perjalanan</div>
+        </div>
+
+        <div class="photo-box" onclick="openLightbox(this)">
+            <img src="D:\CODING\ziaroh\img\2.png">
+            <div class="caption">moment ketika selesai dari maqbaroh kh abdul hamid pasuruan</div>
+        </div>
+
+        <div class="photo-box" onclick="openLightbox(this)">
+            <img src="D:\CODING\ziaroh\img\3.png">
+            <div class="caption">meninggalkan jejak foto sebelum lanjuyt ke maqbaroh sunan kudus</div>
+        </div>
+
+    </div>
+
+    <!-- VIDEO -->
+    <div class="video">
+        <iframe src="D:\CAPCUT FINISH\ZIAROH WALI 8 PONPES AL-HASANI.mp4" allowfullscreen></iframe>
+    </div>
+
+</div>
+
+<footer>
+© 2026 Islamic News | Pesantren Indonesia
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content">
+        <img id="lightbox-img">
+        <p id="lightbox-caption"></p>
+    </div>
+</div>
+
+<script>
+function openLightbox(el){
+    document.getElementById("lightbox-img").src = el.querySelector("img").src;
+    document.getElementById("lightbox-caption").innerText =
+        el.querySelector(".caption").innerText;
+    document.querySelector(".lightbox").style.display="flex";
+}
+function openMainLightbox(){
+    document.getElementById("lightbox-img").src =
+        document.querySelector(".main-photo img").src;
+    document.getElementById("lightbox-caption").innerText =
+        document.querySelector(".overlay h2").innerText;
+    document.querySelector(".lightbox").style.display="flex";
+}
+function closeLightbox(){
+    document.querySelector(".lightbox").style.display="none";
+}
+</script>
+
+</body>
+</html>
